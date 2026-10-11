@@ -28,7 +28,7 @@ class InnocentVpnService : VpnService() {
         if (isRunning) return
 
         try {
-            val builder = Builder()
+            val builder = VpnService.Builder(this)
                 .setSession("InnocentExtremeTunnel")
                 .addAddress("10.0.0.2", 24)
                 .addDnsServer("8.8.8.8")
